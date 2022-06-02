@@ -1,0 +1,14 @@
+*.sif
+.ipynb_checkpoints
+Dockerfile
+*.err
+*.out
+figures/
+scanpy_notebooks/data/
+scanpy_notebooks/write/
+scanpy_notebooks/figures/
+scanpy_notebooks/cache/
+scanpy_notebooks/downloaded_data/*
+seurat_notebooks/data/
+seurat_notebooks/write/
+data/

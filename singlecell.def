@@ -1,0 +1,46 @@
+Bootstrap: docker
+From: continuumio/miniconda3:4.10.3
+Stage: build
+
+%post
+    NOW=`date`
+    echo "export NOW=\"${NOW}\"" >> $SINGULARITY_ENVIRONMENT
+
+    conda config --add channels r
+    conda config --add channels bioconda
+    conda config --add channels conda-forge
+    conda config --set channel_priority flexible
+
+    conda update -n base conda -y
+    conda update --all -y
+
+    conda install -y \
+    python=3.8 \
+    jupyterlab \
+    ipywidgets \
+    scanpy \
+    anndata=0.7.8 \
+    leidenalg=0.8.8 \
+    bbknn \
+    openpyxl \
+    anndata2ri \
+    r-irkernel \
+    r-seurat \
+    r-knitr
+
+    pip install SpatialDE
+    pip install louvain
+    pip install scanorama
+
+%runscript
+    echo "Container was created $NOW"
+    echo "Arguments received: $*"
+    exec echo "$@"
+
+%labels
+    Author frank.zappulla@jax.org
+    Version v0.0.1
+
+%help
+    This is a container for running a basic single cell analysis using python scanpy or Seurat in R.
+    
