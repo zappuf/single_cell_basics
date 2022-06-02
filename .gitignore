@@ -1,6 +1,5 @@
 *.sif
 .ipynb_checkpoints
-Dockerfile
 *.err
 *.out
 figures/
