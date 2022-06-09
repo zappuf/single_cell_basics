@@ -2,8 +2,9 @@
 
 ## What this page is:
 
-- A basic quickstart guide to get someone interested in single cell genomics data **started** with data analysis.
+- A basic quickstart guide to get someone interested in single cell genomics data **started** with data analysis in Code Ocean capsules.
 - Access to a complete runtime environment to run a handful of single cell data tutorials in a jupyter notebook (i.e you won't have to install any software).
+- Access to test data to run complete workflows.
 
 
 
@@ -30,9 +31,8 @@ For a more complete general orverview please read the [Introduction to Single-Ce
 1. Preprocessing and clustering
     - **[pbmc3k.ipynb](scanpy_notebooks/pbmc3k.ipynb)** 
         - [Scanpy](https://scanpy.readthedocs.io/en/stable/index.html) (Single Cell Analysis in Python) reimplementation of Seurat's clustering tutorial for 3,000 PBMCs from 10x Genomics.
-2. Preprocessing and clustering
     - **[seurat_pbmc3k.ipynb](seurat_notebooks/seurat_pbmc3k.ipynb)**
-        - Seurat's clustering tutorial for 3,000 PBMCs from 10x Genomics.
+        - [Seurat](https://satijalab.org/seurat/index.html) clustering tutorial for 3,000 PBMCs from 10x Genomics.
 3. Visualization
     - **[core.ipynb](scanpy_notebooks/core.ipynb)** Core plotting functions
         - visually explore genes using scanpy
